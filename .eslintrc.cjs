@@ -23,10 +23,13 @@ module.exports = {
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier/skip-formatting'
   ],
+  plugins: ['simple-import-sort'],
   parserOptions: {
     ecmaVersion: 'latest'
   },
   rules: {
+    'simple-import-sort/imports': 1, // imports文件排序
+    'simple-import-sort/exports': 1, // exports文件排序
     // TS
     '@typescript-eslint/no-explicit-any': 'off',
     'no-debugger': 'off',
