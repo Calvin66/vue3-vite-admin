@@ -1,9 +1,15 @@
 <script setup lang="ts">
+import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 import { RouterView } from 'vue-router'
+
+/** 将 Element Plus 的语言设置为中文 */
+const locale = zhCn
 </script>
 
 <template>
-  <RouterView />
+  <ElConfigProvider :locale="locale">
+    <RouterView />
+  </ElConfigProvider>
 </template>
 
 <style scoped>
